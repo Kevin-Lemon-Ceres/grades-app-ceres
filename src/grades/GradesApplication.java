@@ -49,7 +49,6 @@ public class GradesApplication {
         students.put("kyndall707", kyndall);
         students.put("jonathanlemman", lemon);
 
-
         System.out.println("Welcome");
 
         do {
@@ -64,7 +63,7 @@ public class GradesApplication {
             if (students.containsKey(sInput)) {
                 System.out.println(String.format("Name: %s - GitHub Username: %s\n" +
                         "Grades: %s\n" +
-                        "Current Average: %.1f", students.get(sInput).getName(), sInput,students.get(sInput).getGrades(), students.get(sInput).getGradeAverage()));
+                        "Current Average: %.1f", students.get(sInput).getName(), sInput, students.get(sInput).getGrades(), students.get(sInput).getGradeAverage()));
             } else {
                 System.out.println(String.format("Sorry, no student found with the GitHub username of %s", sInput));
             }
