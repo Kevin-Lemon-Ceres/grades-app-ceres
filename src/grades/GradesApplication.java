@@ -6,6 +6,7 @@ import java.sql.Struct;
 import java.util.HashMap;
 
 public class GradesApplication {
+
     public static void main(String[] args) {
         Input userInput = new Input();
 
@@ -49,41 +50,27 @@ public class GradesApplication {
         students.put("jonathanlemman", lemon);
 
 
-//        Welcome!
         System.out.println("Welcome");
 
-//        Here are the GitHub usernames of our students:
-        System.out.println("Here are the GitHub usernames of our students: ");
+        do {
+            System.out.println("Here are the GitHub usernames of our students: ");
 
-//        |zgulde| |ryanorsinger| |jreich5| |fmendozaro| |MontealegreLuis|
-        for(String student : students.keySet()) {
-            System.out.print("|" + student + "| ");
-        }
-//        What student would you like to see more information on?
-        userInput.getString("\nWhat student would you like to see more information on?");
-//        > pizza
+            for (String student : students.keySet()) {
+                System.out.print("|" + student + "| ");
+            }
 
-//        Sorry, no student found with the GitHub username of "pizza".
-//
-//        Would you like to see another student?
-//
-//        > y
-//
-//        What student would you like to see more information on?
-//
-//        > zgulde
-//
-//        Name: Zach - GitHub Username: zgulde
-//        Current Average: 87.4
-//
-//        Would you like to see another student?
-//
-//        > no
-//
-//        Goodbye, and have a wonderful day!
+            String sInput = userInput.getString("\nWhat student would you like to see more information on?");
 
+            if (students.containsKey(sInput)) {
+                System.out.println(String.format("Name: %s - GitHub Username: %s\n" +
+                        "Grades: %s\n" +
+                        "Current Average: %.1f", students.get(sInput).getName(), sInput,students.get(sInput).getGrades(), students.get(sInput).getGradeAverage()));
+            } else {
+                System.out.println(String.format("Sorry, no student found with the GitHub username of %s", sInput));
+            }
 
+        } while (userInput.yesNo("Would you like to see another student y/n?"));
 
-
+        System.out.println("Goodbye, and have a wonderful day!");
     }
 }

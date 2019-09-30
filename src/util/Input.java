@@ -33,6 +33,12 @@ public class Input {
         return check.equalsIgnoreCase("yes") || check.equalsIgnoreCase("y");
     }
 
+    public boolean yesNo(String prompt){
+        System.out.println(prompt);
+        String check = this.scanner.nextLine();
+        return check.equalsIgnoreCase("yes") || check.equalsIgnoreCase("y");
+    }
+
     public int getInt(int min, int max){
         int userInput = getInt();
         if(userInput >= min && userInput <= max){
