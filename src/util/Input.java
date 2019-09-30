@@ -47,6 +47,18 @@ public class Input {
         }
     }
 
+    public int getInt(int min, int max, String prompt) {
+        System.out.println(prompt);
+        int userInput = getInt();
+
+        if (userInput >= min && userInput <= max) {
+            return userInput;
+        } else {
+            System.out.println("Out of range");
+            return getInt(min, max);
+        }
+    }
+
     public int getInt() {
         System.out.println("Give me a number: ");
         return Integer.parseInt(this.scanner.nextLine());
