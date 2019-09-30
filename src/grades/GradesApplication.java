@@ -1,10 +1,13 @@
 package grades;
 
+import util.Input;
+
 import java.sql.Struct;
 import java.util.HashMap;
 
 public class GradesApplication {
     public static void main(String[] args) {
+        Input userInput = new Input();
 
         HashMap<String, Student> students = new HashMap<>();
         Student kevin = new Student("Kevin");
@@ -47,15 +50,19 @@ public class GradesApplication {
 
 
 //        Welcome!
-//
+        System.out.println("Welcome");
+
 //        Here are the GitHub usernames of our students:
-//
+        System.out.println("Here are the GitHub usernames of our students: ");
+
 //        |zgulde| |ryanorsinger| |jreich5| |fmendozaro| |MontealegreLuis|
-//
+        for(String student : students.keySet()) {
+            System.out.print("|" + student + "| ");
+        }
 //        What student would you like to see more information on?
-//
+        userInput.getString("\nWhat student would you like to see more information on?");
 //        > pizza
-//
+
 //        Sorry, no student found with the GitHub username of "pizza".
 //
 //        Would you like to see another student?
