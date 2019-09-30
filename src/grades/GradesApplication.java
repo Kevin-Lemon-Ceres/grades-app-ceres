@@ -44,5 +44,39 @@ public class GradesApplication {
         students.put("luisdelgado373", luis);
         students.put("kyndall707", kyndall);
         students.put("jonathanlemman", lemon);
+
+
+//        Welcome!
+//
+//        Here are the GitHub usernames of our students:
+//
+//        |zgulde| |ryanorsinger| |jreich5| |fmendozaro| |MontealegreLuis|
+//
+//        What student would you like to see more information on?
+//
+//        > pizza
+//
+//        Sorry, no student found with the GitHub username of "pizza".
+//
+//        Would you like to see another student?
+//
+//        > y
+//
+//        What student would you like to see more information on?
+//
+//        > zgulde
+//
+//        Name: Zach - GitHub Username: zgulde
+//        Current Average: 87.4
+//
+//        Would you like to see another student?
+//
+//        > no
+//
+//        Goodbye, and have a wonderful day!
+
+
+
+
     }
 }
